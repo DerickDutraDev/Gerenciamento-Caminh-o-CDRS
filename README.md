@@ -22,7 +22,7 @@ Sistema desenvolvido para otimizar e gerenciar o fluxo logístico, focando no co
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/truck-yard.git
+   https://github.com/DerickDutraDev/Gerenciamento-Caminh-o-CDRS.git
    cd truck-yard
    ```
 
