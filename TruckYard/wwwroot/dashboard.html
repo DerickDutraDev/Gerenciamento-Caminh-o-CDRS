@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard — TruckYard</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo">🚚</div>
+                <div>
+                    <div class="title">TruckYard</div>
+                    <div class="subtitle">Painel — Transportadora</div>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="backBtn" class="btn ghost">← Pátio</button>
+                <button id="refreshBtn" class="btn">Atualizar</button>
+            </div>
+        </header>
+
+        <main class="main-grid">
+            <section class="card overview">
+                <h3>Visão Geral</h3>
+                <div id="stats" class="stats">
+                   
+                    <div class="stub">Carregando...</div>
+                </div>
+            </section>
+
+            <section class="card trucks">
+                <h3>Caminhões no pátio</h3>
+                <div id="truckList" class="list"></div>
+            </section>
+
+            <section class="card rightcol">
+                <h3>Detalhes do caminhão</h3>
+                <div id="truckDetails" class="details">
+                    <div class="hint">Selecione um caminhão à esquerda.</div>
+                </div>
+            </section>
+
+            <section class="card movements">
+                <h3>Últimos movimentos</h3>
+                <div id="movements" class="list small"></div>
+            </section>
+        </main>
+    </div>
+
+    <template id="truckTpl">
+        <div class="truck-item">
+            <div>
+                <div class="plate"></div>
+                <div class="meta"></div>
+            </div>
+            <div class="mini-actions">
+                <button class="btn small view">Ver</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="/scripts/dashboard.js" type="module"></script>
+</body>
+</html>

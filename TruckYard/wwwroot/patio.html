@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pátio — TruckYard</title>
+    <link rel="stylesheet" href="/styles/patio.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pátio — Caminhões</h1>
+            <div class="controls">
+                <button id="refresh">Atualizar</button>
+                <button id="open-dashboard">Dashboard</button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <div class="card">
+                    <h3>Caminhões no Pátio</h3>
+                    <div id="yard-list"></div>
+                    <div id="yard-empty" class="list-empty" style="display:none">Nenhum caminhão no pátio</div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3>Registrar Entrada / Saída</h3>
+                    <div class="form-row">
+                        <input id="truckIdInput" placeholder="ID do caminhão (ex: 1)" />
+                        <button id="btn-entry" class="btn">Registrar Entrada</button>
+                        <button id="btn-exit" class="btn" style="background:#db5245">Registrar Saída</button>
+                    </div>
+                    <div class="small">Você pode selecionar um caminhão na lista ou informar o ID manualmente.</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card">
+                    <h3>Detalhes / Ações</h3>
+                    <div id="selected-info"><div class="small">Selecione um caminhão para ver detalhes.</div></div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3>Adicionar caminhão</h3>
+                    <div id="create-form">
+                        <div class="form-row">
+                            <input id="newPlate" placeholder="Placa" />
+                            <input id="newModel" placeholder="Modelo" />
+                        </div>
+                        <div class="form-row">
+                            <input id="newDriver" placeholder="Motorista" />
+                            <select id="newStatus">
+                                <option value="Available">Available</option>
+                                <option value="InYard">InYard</option>
+                                <option value="Loading">Loading</option>
+                                <option value="Unloading">Unloading</option>
+                                <option value="InTransit">InTransit</option>
+                                <option value="Maintenance">Maintenance</option>
+                            </select>
+                        </div>
+                        <button id="createTruck" class="btn">Criar caminhão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/patio.js"></script>
+</body>
+</html>
